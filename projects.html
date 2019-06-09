@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Laka Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo-avatar">
+        <img src="assets/SVG/logo-avatar.svg" alt="laka-avatar" />
+      </a>
+      <img class="menu-bar" src="assets/Menu hamburger.png" alt="menu" />
+      <div class="nav">
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="#" class="menu-close"
+          ><img src="assets/menuClose.png" alt="menu"
+        /></a>
+      </div>
+    </header>
+    <main>
+      <section class="project-landing-page">
+        <h2>Some of the projects of my <span>creation</span>.</h2>
+        <button class="know-more">
+          <a href="#project1">Know More</a>
+        </button>
+      </section>
+      <div class="bg-triangle-1"></div>
+      <section class="project project-01" id="project1">
+        <div class="heading">
+          <div class="project-intro">
+            <h2 class="project-number">01.</h2>
+            <h2>Soccer Quiz App</h2>
+            <p class="project-desc">
+              A quiz app to test your knowledge Ion the world of soccer.
+            </p>
+            <p>Created using jQuery, HTML and CSS</p>
+          </div>
+          <div class="project-buttons">
+            <button class="live-demo">
+              <a
+                href=" https://lakaganth.github.io/Bloc-Quiz-App/"
+                target="_blank"
+                >Live Demo</a
+              >
+            </button>
+            <button class="code">
+              <a
+                href="https://github.com/Lakaganth/Bloc-Quiz-App"
+                target="_blank"
+                >GitHub Code</a
+              >
+            </button>
+          </div>
+        </div>
+
+        <article class="project-display">
+          <div class="project-scroll">
+            <img src="assets/project laptop.png" alt="" />
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <script src="menu-animation.js"></script>
+  </body>
+</html>

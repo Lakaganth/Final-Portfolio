@@ -1,0 +1,71 @@
+@import "./style.scss";
+
+@mixin contact-logos {
+  height: 80px;
+  width: 80px;
+  border: none;
+  border-radius: 50%;
+  background: #fff711;
+}
+
+@mixin contact-img {
+  min-height: 50px;
+  min-width: 50px;
+}
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "heading heading"
+    "links links";
+  padding: 2vh 0 0 2vw;
+
+  .contact-message {
+    grid-area: heading;
+    align-self: center;
+    h2 {
+      @include main-headings;
+    }
+
+    h3 {
+      @include sub-headings;
+    }
+  }
+
+  .contact-links {
+    grid-area: links;
+    align-self: center;
+
+    .contact-div {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas:
+        " img link"
+        " img link"
+        " img link";
+      grid-gap: 7vh;
+
+      .logo {
+        grid-area: img;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1vw;
+        @include contact-logos();
+        img {
+          @include contact-img();
+        }
+      }
+
+      span {
+        grid-area: link;
+        align-self: center;
+        align-items: center;
+        font-size: 1.1em;
+        color: $primaryText;
+      }
+    }
+  }
+}

@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: #27133a;
+}
+
+body header {
+  padding-top: 1vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5em 200px 5fr 20vw 2px;
+      grid-template-columns: 1.5em 200px 5fr 20vw 2px;
+      grid-template-areas: ". logo . bar .";
+  z-index: 0;
+}
+
+body header .logo-avatar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  position: relative;
+}
+
+body header .logo-avatar img {
+  max-width: 90px;
+  max-height: 90px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body header .menu-bar {
+  height: 30px;
+  width: 30px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: bar;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body header .nav {
+  z-index: 2;
+  position: absolute;
+  top: 0vw;
+  right: 100vw;
+  width: 100vw;
+  height: 50vh;
+  background: rgba(55, 6, 86, 0.849);
+}
+
+body header .nav .menu-close {
+  position: absolute;
+  top: 4vh;
+  right: 10vw;
+}
+
+body header .nav ul {
+  width: 100vw;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .nav ul li {
+  list-style: none;
+  padding: 25px 0 0 0;
+}
+
+body header .nav ul li a {
+  color: #fff;
+  position: relative;
+  font-size: 2rem;
+}
+
+body header .nav ul li a:hover {
+  color: #f7ff15;
+  font-size: 2rem;
+}
+
+body .landing-page {
+  height: 90vh;
+  padding-top: 1vh;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1vw;
+  -ms-grid-columns: 10vw 1fr 10vw;
+      grid-template-columns: 10vw 1fr 10vw;
+      grid-template-areas: ". headings ." ". logo . ";
+  scroll-snap-align: start;
+  position: relative;
+}
+
+body .landing-page .landing-page-content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: headings;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+body .landing-page .landing-page-content h1 {
+  color: #fff;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+body .landing-page .landing-page-content h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+body .landing-page .landing-page-content button {
+  width: 100px;
+  height: 50px;
+  color: #0f0f0f;
+  background: #f7ff15;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 900;
+  position: absolute;
+  margin-left: 25vw;
+  z-index: 1;
+}
+
+body .landing-page .landing-page-logo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+body .landing-page .landing-page-logo .laka-logo {
+  width: 30vw;
+  height: 30vh;
+  position: absolute;
+  top: -15vh;
+  left: 22vw;
+}
+
+body .bg-triangle-1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100vh 100vh;
+  border-color: transparent transparent #3b1e56 transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+body .bio-animation {
+  height: 100vh;
+  width: 100%;
+}
+
+body .bio-animation .lap-mob-image-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". lap mob .";
+}
+
+body .bio-animation .lap-mob-image-wrapper .laptop-section {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: lap;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 100%;
+}
+
+body .bio-animation .lap-mob-image-wrapper .laptop-section .inner-lap {
+  position: relative;
+}
+
+body .bio-animation .lap-mob-image-wrapper .laptop-section .inner-lap img {
+  top: 40vh;
+  left: 0;
+  position: absolute;
+  height: 25vh;
+}
+
+body .bio-animation .lap-mob-image-wrapper .laptop-section .inner-lap .second-lap-layer-2 {
+  z-index: 1;
+  opacity: 0;
+}
+
+body .bio-animation .lap-mob-image-wrapper .laptop-section .inner-lap .second-lap-layer-3 {
+  opacity: 0;
+  z-index: 1;
+}
+
+body .bio-animation .lap-mob-image-wrapper .mobile-section {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: mob;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 100%;
+}
+
+body .bio-animation .lap-mob-image-wrapper .mobile-section .inner-mob {
+  position: relative;
+}
+
+body .bio-animation .lap-mob-image-wrapper .mobile-section .inner-mob img {
+  top: 45vh;
+  position: absolute;
+  height: 20vh;
+}
+
+body .bio-animation .lap-mob-image-wrapper .mobile-section .inner-mob .second-mob-layer-2 {
+  opacity: 0;
+  z-index: 1;
+}
+
+body .second-page {
+  height: 100vh;
+  padding-top: 10%;
+  z-index: 1;
+  position: relative;
+}
+
+body .second-page .about .about-text {
+  max-width: 90vw;
+  min-height: 30vh;
+  border-radius: 20px;
+  background: #5946b2;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+}
+
+body .second-page .about .about-text h3 {
+  padding-top: 1.5vh;
+  color: #fff;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+body .second-page .about .about-text p {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px 20px 0 40px;
+}
+
+body .bg-triangle-2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vh 100vh 0;
+  border-color: transparent #3b1e56 transparent transparent;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.circle-small {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  min-width: 80px;
+  min-height: 80px;
+  bottom: 10%;
+  left: 30%;
+  border: rgba(72, 255, 29, 0.3) 3px solid;
+  color: transparent;
+}
+
+.circle-med {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  min-width: 300px;
+  min-height: 300px;
+  top: -10%;
+  left: -40px;
+  border: rgba(255, 28, 255, 0.3) 3px solid;
+  color: transparent;
+}
+
+.circle-large {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  width: 350px;
+  height: 350px;
+  top: 10%;
+  right: 16%;
+  border: rgba(29, 243, 214, 0.1) 3px solid;
+  color: transparent;
+}
+
+@media (min-width: 1100px) {
+  .menu-bar {
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: end !important;
+  }
+  .landing-page {
+    -ms-grid-columns: 10vw 1fr 1fr 10vw !important;
+        grid-template-columns: 10vw 1fr 1fr 10vw !important;
+        grid-template-areas: ". headings logo ." !important;
+  }
+  .landing-page .landing-page-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: headings;
+  }
+  .landing-page .landing-page-content h1 {
+    text-align: right !important;
+  }
+  .landing-page .landing-page-content h3 {
+    text-align: right !important;
+  }
+  .landing-page .landing-page-content button {
+    margin-left: 32vw !important;
+  }
+  .landing-page .landing-page-logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: logo;
+  }
+  .landing-page .landing-page-logo .laka-logo {
+    width: 23vw !important;
+    height: 23vh !important;
+    top: -28vh !important;
+    left: 11vw !important;
+  }
+  .landing-page .landing-page-logo .laptop-logo {
+    width: 45vw;
+    height: 45vh;
+    top: -18vh;
+    left: 0vw;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .landing-page {
+    height: 90vh;
+    padding-top: 1vh;
+    z-index: 1;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1vw;
+    -ms-grid-columns: 10vw 1fr 10vw;
+        grid-template-columns: 10vw 1fr 10vw;
+        grid-template-areas: ". headings ." ". logo . ";
+    scroll-snap-align: start;
+    position: relative;
+  }
+  .landing-page .landing-page-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: headings;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: relative;
+    margin-bottom: 5vh;
+  }
+  .landing-page .landing-page-content h1 {
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  .landing-page .landing-page-content h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  .landing-page .landing-page-content button {
+    width: 100px;
+    height: 50px;
+    color: #0f0f0f;
+    background: #f7ff15;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 900;
+    position: absolute;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 32vw !important;
+    z-index: 1;
+  }
+  .landing-page .landing-page-logo {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: logo;
+  }
+  .landing-page .landing-page-logo .laka-logo {
+    width: 17vw !important;
+    height: 17vh !important;
+    position: absolute;
+    top: -30vh !important;
+    left: 28vw !important;
+  }
+  .landing-page .landing-page-logo .laptop-logo {
+    width: 50vw;
+    height: 50vh;
+    top: -30vh;
+    left: 12vw;
+    position: absolute;
+    z-index: -1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

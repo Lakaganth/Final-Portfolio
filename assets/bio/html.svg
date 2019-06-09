@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="114.654" height="161.409" viewBox="0 0 114.654 161.409">
+  <g id="html" transform="translate(-74.012)">
+    <g id="Group_37" data-name="Group 37" transform="translate(84.847)">
+      <g id="Group_36" data-name="Group 36" transform="translate(0)">
+        <g id="Group_35" data-name="Group 35">
+          <path id="Path_169" data-name="Path 169" d="M108.382,0h7.275V7.188h6.655V0h7.275V21.766h-7.275V14.478h-6.655v7.289h-7.275V0Z" transform="translate(-108.382)" fill="#fcfcfc"/>
+          <path id="Path_170" data-name="Path 170" d="M192.083,7.218h-6.4V0h20.088V7.218h-6.407V21.766h-7.275V7.218Z" transform="translate(-161.31)" fill="#fcfcfc"/>
+          <path id="Path_171" data-name="Path 171" d="M259.511,0H267.1l4.666,7.648L276.425,0h7.589V21.766h-7.245V10.978l-5.005,7.739h-.125l-5.009-7.739V21.766h-7.118Z" transform="translate(-211.867)" fill="#fcfcfc"/>
+          <path id="Path_172" data-name="Path 172" d="M348.72,0H356V14.572h10.231v7.195H348.72Z" transform="translate(-272.953)" fill="#fcfcfc"/>
+        </g>
+      </g>
+    </g>
+    <g id="Guides_to_delete" transform="translate(74.012 31.304)">
+      <g id="Group_39" data-name="Group 39">
+        <path id="Path_173" data-name="Path 173" d="M84.451,216.391,74.012,99.3H188.666L178.214,216.4l-46.9,13Z" transform="translate(-74.012 -99.297)" fill="#e34e26"/>
+        <path id="Path_174" data-name="Path 174" d="M255.857,129.657V240.245l37.927-10.513,8.936-100.075Z" transform="translate(-198.53 -120.086)" fill="#ef662a"/>
+        <path id="Path_175" data-name="Path 175" d="M141.761,175.217l3.871,43.429h49.777l-1.671,18.628-16.027,4.333-16-4.327-1.07-11.96H146.23l2.061,23.056,29.416,8.17,29.455-8.17,3.949-44.089H158.767l-1.314-14.707h54.959l1.286-14.363Z" transform="translate(-120.403 -151.283)" fill="#fff"/>
+        <g id="Group_38" data-name="Group 38" transform="translate(21.358 23.934)">
+          <path id="Path_176" data-name="Path 176" d="M177.73,175.217H141.761l3.871,43.429h32.1V204.287H158.767l-1.314-14.707H177.73Z" transform="translate(-141.761 -175.217)" fill="#ebebeb"/>
+          <path id="Path_177" data-name="Path 177" d="M187.437,350.427l-.018.006-16-4.327-1.07-11.96H155.937L158,357.2l29.416,8.17.022-.006Z" transform="translate(-151.468 -284.043)" fill="#ebebeb"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

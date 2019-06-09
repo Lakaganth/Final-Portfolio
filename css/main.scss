@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primaryBG: #27133a;
+$secondaryBG: #3b1e56;
+$primaryText: #fff;
+$boxColor: #5946b2;
+$buttonColor: #f7ff15;
+$h1Size: 3rem;
+$h2Size: 2rem;
+$h3Size: 1.5rem;
+$pSize: 1.2rem;
+
+@mixin main-headings {
+  color: $primaryText;
+  font-size: $h1Size;
+  padding-bottom: 2rem;
+}
+
+@mixin sub-headings {
+  color: $primaryText;
+  font-size: $h3Size;
+  padding-bottom: 1rem;
+}
+
+@mixin buttons {
+  width: 100px;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  background: $buttonColor;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+@mixin paras {
+  color: $primaryText;
+  font-size: $pSize;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: $primaryBG;
+
+  header {
+    padding-top: 1vh;
+    display: grid;
+    grid-template-columns: 3em 120px 5fr 20vw 2px;
+    grid-template-areas: ". logo . nav .";
+    .logo-avatar {
+      grid-area: logo;
+      position: relative;
+      img {
+        max-width: 120px;
+        max-height: 120px;
+        align-self: center;
+      }
+    }
+
+    ul {
+      grid-area: nav;
+      display: grid;
+      grid-gap: 5vw;
+      grid-template-columns: 1fr 1fr;
+      //  minmax(1.5em, 1fr) minmax(1.5em, 2fr);
+
+      li {
+        list-style: none;
+        align-self: center;
+
+        a {
+          color: $primaryText;
+          position: relative;
+        }
+        a:hover {
+          color: #f7ff15;
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+
+  .landing-page {
+    height: 90vh;
+    padding-top: 15vh;
+    z-index: 1;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 20vw 1fr 1.2fr 18vw;
+    grid-template-areas: ". headings logo .";
+    scroll-snap-align: start;
+    position: relative;
+
+    .landing-page-content {
+      grid-area: headings;
+      align-self: center;
+      position: relative;
+
+      h1 {
+        @include main-headings;
+        text-align: right;
+      }
+
+      h3 {
+        @include sub-headings();
+        text-align: right;
+      }
+
+      h3::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: rgb(255, 20, 204);
+        margin-bottom: 1rem;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 250ms ease-in;
+      }
+
+      h3:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      button {
+        @include buttons();
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+
+      button::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($color: #181717, $alpha: 0.2);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 250ms ease-in;
+      }
+      button:hover::after {
+        transform: scalex(1);
+        transform-origin: left;
+      }
+    }
+    .landing-page-logo {
+      grid-area: logo;
+      align-self: center;
+      min-width: 20vw;
+      min-height: 20vh;
+    }
+  }
+
+  .bg-triangle-1 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100vh 100vh;
+    border-color: transparent transparent $secondaryBG transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  .second-page {
+    height: 100vh;
+    padding-top: 4%;
+    z-index: 1;
+    position: relative;
+    .about {
+      .about-text {
+        max-width: 80vw;
+        height: 30vh;
+        border-radius: 20px;
+        background: $boxColor;
+        margin: 0 auto;
+        padding: 0 0 0 0;
+        h3 {
+          padding-top: 1.2vh;
+          @include sub-headings();
+          text-align: center;
+        }
+
+        p {
+          @include paras();
+          text-align: center;
+          padding: 10px 20px 0 20px;
+        }
+        .box1 {
+          position: absolute;
+          top: 0;
+          left: 20%;
+          z-index: -1;
+          width: 30px;
+          height: 30px;
+          border: 5px solid #20a2c3;
+          overflow: hidden;
+          transform: rotateZ(65deg);
+        }
+      }
+    }
+  }
+  .bg-triangle-2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vh 100vh 0;
+    border-color: transparent $secondaryBG transparent transparent;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+.circle-small {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  min-width: 80px;
+  min-height: 80px;
+  bottom: 10%;
+  left: 30%;
+  border: rgba($color: #48ff1d, $alpha: 0.3) 3px solid;
+  color: transparent;
+}
+
+.circle-med {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  min-width: 300px;
+  min-height: 300px;
+  top: -10%;
+  left: -40px;
+  border: rgba($color: #ff1cff, $alpha: 0.3) 3px solid;
+  color: transparent;
+}
+
+.circle-large {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  width: 350px;
+  height: 350px;
+  top: 10%;
+  right: 16%;
+  border: rgba($color: #1df3d6, $alpha: 0.1) 3px solid;
+  color: transparent;
+}
+
+.landing-page {
+  height: 90vh;
+  padding-top: 1vh;
+  z-index: 1;
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: 10vw 1fr 10vw;
+  grid-template-areas:
+    ". headings ."
+    ". logo . ";
+  scroll-snap-align: start;
+  position: relative;
+
+  .landing-page-content {
+    grid-area: headings;
+    align-self: center;
+    position: relative;
+    margin-bottom: 5vh;
+    h1 {
+      @include main-headings;
+      text-align: center;
+    }
+
+    h3 {
+      @include sub-headings();
+      text-align: center;
+    }
+
+    button {
+      @include buttons();
+      position: absolute;
+
+      margin-left: 25vw;
+      z-index: 1;
+    }
+  }
+  .landing-page-logo {
+    grid-area: logo;
+    align-self: center;
+    position: relative;
+    //   min-width: 15vw;
+    //   min-height: 15vh;
+    .laka-logo {
+      width: 30vw;
+      height: 30vh;
+      position: absolute;
+      top: -15vh;
+      left: 22vw;
+    }
+  }
+}
+
+.bg-triangle-1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100vh 100vh;
+  border-color: transparent transparent $secondaryBG transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  z-index: -1;
+}

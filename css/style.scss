@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primaryBG: #27133a;
+$secondaryBG: #3b1e56;
+$primaryText: #fff;
+$boxColor: #5946b2;
+$buttonColor: #f7ff15;
+$h1Size: 3rem;
+$h2Size: 2rem;
+$h3Size: 1.5rem;
+$pSize: 1.2rem;
+
+@mixin main-headings {
+  color: $primaryText;
+  font-size: $h1Size;
+  padding-bottom: 2rem;
+}
+
+@mixin sub-headings {
+  color: $primaryText;
+  font-size: $h3Size;
+  padding-bottom: 1rem;
+}
+
+@mixin buttons {
+  width: 100px;
+  height: 50px;
+  color: rgb(15, 15, 15);
+  background: $buttonColor;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+@mixin paras {
+  color: $primaryText;
+  font-size: $pSize;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: $primaryBG;
+
+  header {
+    padding-top: 1vh;
+    display: grid;
+    grid-template-columns: 1.5em 200px 5fr 20vw 2px;
+    grid-template-areas: ". logo . bar .";
+    z-index: 0;
+    .logo-avatar {
+      grid-area: logo;
+      position: relative;
+      img {
+        max-width: 90px;
+        max-height: 90px;
+        align-self: center;
+      }
+    }
+
+    .menu-bar {
+      height: 30px;
+      width: 30px;
+      grid-area: bar;
+      align-self: center;
+    }
+
+    .nav {
+      z-index: 2;
+      position: absolute;
+      top: 0vw;
+      right: 100vw;
+      width: 100vw;
+      height: 50vh;
+      background: hsla(277, 87%, 18%, 0.849);
+      //   background: $secondaryBG;
+      .menu-close {
+        position: absolute;
+        top: 4vh;
+        right: 10vw;
+      }
+      ul {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          list-style: none;
+          padding: 25px 0 0 0;
+
+          a {
+            color: $primaryText;
+            position: relative;
+            font-size: $h2Size;
+          }
+          a:hover {
+            color: #f7ff15;
+            font-size: $h2Size;
+          }
+        }
+      }
+    }
+  }
+
+  //------------------------Landing-Page-Section--------------------//
+
+  .landing-page {
+    height: 90vh;
+    padding-top: 1vh;
+    z-index: 1;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 10vw 1fr 10vw;
+    grid-template-areas:
+      ". headings ."
+      ". logo . ";
+    scroll-snap-align: start;
+    position: relative;
+
+    .landing-page-content {
+      grid-area: headings;
+      align-self: center;
+      position: relative;
+      margin-bottom: 5vh;
+      h1 {
+        @include main-headings;
+        text-align: center;
+      }
+
+      h3 {
+        @include sub-headings();
+        text-align: center;
+      }
+
+      button {
+        @include buttons();
+        position: absolute;
+
+        margin-left: 25vw;
+        z-index: 1;
+      }
+    }
+    .landing-page-logo {
+      grid-area: logo;
+      align-self: center;
+      position: relative;
+      //   min-width: 15vw;
+      //   min-height: 15vh;
+      .laka-logo {
+        width: 30vw;
+        height: 30vh;
+        position: absolute;
+        top: -15vh;
+        left: 22vw;
+      }
+    }
+  }
+
+  .bg-triangle-1 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100vh 100vh;
+    border-color: transparent transparent $secondaryBG transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  .bio-animation {
+    height: 100vh;
+    width: 100%;
+    .lap-mob-image-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". lap mob .";
+      .laptop-section {
+        grid-area: lap;
+        align-self: center;
+        justify-self: center;
+        max-width: 100%;
+        .inner-lap {
+          position: relative;
+          img {
+            top: 40vh;
+            left: 0;
+            position: absolute;
+            // width: 25vw;
+            height: 25vh;
+          }
+          .second-lap-layer-1 {
+            // display: none;
+            // opacity: 0;
+          }
+
+          .second-lap-layer-2 {
+            // display: none;
+            z-index: 1;
+            opacity: 0;
+
+            // height: 10vh;
+          }
+
+          .second-lap-layer-3 {
+            opacity: 0;
+            z-index: 1;
+
+            // height: 10vh;
+          }
+        }
+      }
+      .mobile-section {
+        grid-area: mob;
+        align-self: center;
+        justify-self: center;
+        max-width: 100%;
+        .inner-mob {
+          position: relative;
+          img {
+            top: 45vh;
+            // left: 0vw;
+            position: absolute;
+            // width: 20vw;
+            height: 20vh;
+          }
+          .second-mob-layer-1 {
+          }
+          .second-mob-layer-2 {
+            opacity: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+  //------------------------Second - Page-Section--------------------//
+
+  .second-page {
+    height: 100vh;
+    padding-top: 10%;
+    z-index: 1;
+    position: relative;
+    .about {
+      .about-text {
+        max-width: 90vw;
+        min-height: 30vh;
+        border-radius: 20px;
+        background: $boxColor;
+        margin: 0 auto;
+        padding: 0 0 0 0;
+        h3 {
+          padding-top: 1.5vh;
+          @include sub-headings();
+          text-align: center;
+        }
+
+        p {
+          @include paras();
+          text-align: center;
+          padding: 10px 20px 0 40px;
+        }
+      }
+    }
+  }
+  .bg-triangle-2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vh 100vh 0;
+    border-color: transparent $secondaryBG transparent transparent;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+.circle-small {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  min-width: 80px;
+  min-height: 80px;
+  bottom: 10%;
+  left: 30%;
+  border: rgba($color: #48ff1d, $alpha: 0.3) 3px solid;
+  color: transparent;
+}
+
+.circle-med {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  min-width: 300px;
+  min-height: 300px;
+  top: -10%;
+  left: -40px;
+  border: rgba($color: #ff1cff, $alpha: 0.3) 3px solid;
+  color: transparent;
+}
+
+.circle-large {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  width: 350px;
+  height: 350px;
+  top: 10%;
+  right: 16%;
+  border: rgba($color: #1df3d6, $alpha: 0.1) 3px solid;
+  color: transparent;
+}
+
+//----------------Media Queries-----------------//
+
+//-------------------DESKTOP---------------------//
+@media (min-width: 1100px) {
+  .menu-bar {
+    align-items: end !important;
+  }
+  .landing-page {
+    grid-template-columns: 10vw 1fr 1fr 10vw !important;
+    grid-template-areas: ". headings logo ." !important;
+
+    .landing-page-content {
+      grid-area: headings;
+
+      h1 {
+        text-align: right !important;
+      }
+
+      h3 {
+        text-align: right !important;
+      }
+
+      button {
+        margin-left: 32vw !important;
+      }
+    }
+
+    .landing-page-logo {
+      grid-area: logo;
+
+      .laka-logo {
+        width: 23vw !important;
+        height: 23vh !important;
+        top: -28vh !important;
+        left: 11vw !important;
+      }
+      .laptop-logo {
+        width: 45vw;
+        height: 45vh;
+        top: -18vh;
+        left: 0vw;
+        position: absolute;
+
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .landing-page {
+    height: 90vh;
+    padding-top: 1vh;
+    z-index: 1;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 10vw 1fr 10vw;
+    grid-template-areas:
+      ". headings ."
+      ". logo . ";
+    scroll-snap-align: start;
+    position: relative;
+
+    .landing-page-content {
+      grid-area: headings;
+      align-self: center;
+      position: relative;
+      margin-bottom: 5vh;
+      h1 {
+        @include main-headings;
+        text-align: center;
+      }
+
+      h3 {
+        @include sub-headings();
+        text-align: center;
+      }
+
+      button {
+        @include buttons();
+        position: absolute;
+        align-self: center;
+        margin-left: 32vw !important;
+        z-index: 1;
+      }
+    }
+    .landing-page-logo {
+      grid-area: logo;
+
+      .laka-logo {
+        width: 17vw !important;
+        height: 17vh !important;
+        position: absolute;
+        top: -30vh !important;
+        left: 28vw !important;
+      }
+      .laptop-logo {
+        width: 50vw;
+        height: 50vh;
+        top: -30vh;
+        left: 12vw;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+}

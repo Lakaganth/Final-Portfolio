@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Laka Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo-avatar">
+        <img src="assets/SVG/logo-avatar.svg" alt="laka-avatar" />
+      </a>
+      <img class="menu-bar" src="assets/Menu hamburger.png" alt="menu" />
+      <div class="nav">
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="#" class="menu-close"
+          ><img src="assets/menuClose.png" alt="menu"
+        /></a>
+      </div>
+    </header>
+    <main>
+      <section class="landing-page">
+        <div class="landing-page-content">
+          <h1>Hi, I'm Lakshmi Ganth <span>Mohan</span>.</h1>
+          <h3 class="sub-head">I'm a front-end developer</h3>
+          <button><a href="#second-page1">Read More</a></button>
+        </div>
+        <div class="landing-page-logo ">
+          <div>
+            <img
+              class="laka-logo"
+              src="assets/SVG/laka-logo.svg"
+              alt="laka-logo"
+            />
+          </div>
+          <img
+            class="laptop-logo"
+            src="assets/SVG/laptop-logo.svg"
+            alt="laka-logo"
+          />
+        </div>
+      </section>
+      <div class="circle circle-small"></div>
+      <div class="circle circle-med"></div>
+      <div class=" circle circle-large"></div>
+      <div class="bg-triangle-1"></div>
+
+      <section class="second-page" id="second-page1">
+        <section class="about">
+          <article class="about-text">
+            <h3>I'm Glad to see you here!</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting
+            </p>
+            <div class="box1 "></div>
+          </article>
+
+          <section class="bio-animation trigger2">
+            <div class="lap-mob-image-wrapper">
+              <div class="laptop-section">
+                <div class="inner-lap">
+                  <img src="assets/bio/lap.svg" alt="laptop svg" />
+                  <img
+                    class="second-lap-layer-1"
+                    src="assets/bio/html.svg"
+                    alt="html"
+                  />
+                  <img
+                    class="second-lap-layer-2"
+                    src="assets/bio/js.svg"
+                    alt="JAvaScript"
+                  />
+                  <!-- <img
+                    class="second-lap-layer-3"
+                    src="assets/bio/github.svg"
+                    alt="Github"
+                  /> -->
+                </div>
+              </div>
+              <div class="mobile-section">
+                <div class="inner-mob">
+                  <img src="assets/bio/mob.svg" alt="mob svg" />
+                  <img
+                    class="second-mob-layer-1"
+                    src="assets/bio/css.svg"
+                    alt="css"
+                  />
+                  <img
+                    class="second-mob-layer-2"
+                    src="assets/bio/github.svg"
+                    alt="jquery"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <div class="bg-triangle-2"></div>
+        <div
+          class="circle circle-small"
+          data-lax-scale="700 0, 500 1, 100 1, 0 0"
+          data-lax-anchor="self"
+        ></div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="menu-animation.js"></script>
+
+    <script src="bio-anim.js"></script>
+  </body>
+</html>

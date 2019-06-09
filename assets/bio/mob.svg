@@ -1,0 +1,28 @@
+<svg id="Layer_5" data-name="Layer 5" xmlns="http://www.w3.org/2000/svg" width="153.733" height="206.781" viewBox="0 0 153.733 206.781">
+  <rect id="Outter_screen" data-name="Outter screen" width="206.781" height="107.18" rx="14.117" transform="translate(107.18) rotate(90)" fill="#050505"/>
+  <rect id="inner-screen" width="85.527" height="168.889" rx="6.67" transform="translate(10.826 10.826)" fill="#fff" opacity="0.33"/>
+  <g id="Home_button" data-name="Home button" transform="translate(43.305 184.046)">
+    <circle id="Ellipse_17" data-name="Ellipse 17" cx="8.661" cy="8.661" r="8.661" fill="#efefed"/>
+    <rect id="Rectangle_103" data-name="Rectangle 103" width="9.563" height="9.563" rx="3.667" transform="translate(3.97 4.33)" fill="#969690" stroke="#000" stroke-miterlimit="10" stroke-width="0.803" opacity="0.33"/>
+  </g>
+  <g id="Group_21" data-name="Group 21" transform="translate(20.57 48.718)">
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="31.5" height="3.177" rx="1.467" fill="#ed1c24"/>
+    <rect id="Rectangle_105" data-name="Rectangle 105" width="31.5" height="3.177" rx="1.467" transform="translate(1.881 10.803)" fill="blue"/>
+    <rect id="Rectangle_106" data-name="Rectangle 106" width="31.5" height="3.177" rx="1.467" transform="translate(0.94 26.054)" fill="#9e005d"/>
+    <rect id="Rectangle_107" data-name="Rectangle 107" width="31.5" height="3.177" rx="1.467" transform="translate(16.925 19.699)" fill="#f50"/>
+    <rect id="Rectangle_108" data-name="Rectangle 108" width="7.992" height="3.177" rx="1.467" transform="translate(73.813 19.699)" fill="lime"/>
+    <rect id="Rectangle_109" data-name="Rectangle 109" width="31.5" height="3.177" rx="1.467" transform="translate(86.506 19.699)" fill="#ed1e79"/>
+    <rect id="Rectangle_110" data-name="Rectangle 110" width="18.806" height="3.177" rx="1.467" transform="translate(51.246 19.699)" fill="#29abe2"/>
+  </g>
+  <g id="Group_22" data-name="Group 22" transform="translate(35.727 85.527)">
+    <rect id="Rectangle_111" data-name="Rectangle 111" width="31.5" height="3.177" rx="1.467" fill="#ed1c24"/>
+    <rect id="Rectangle_112" data-name="Rectangle 112" width="31.5" height="3.177" rx="1.467" transform="translate(1.881 10.803)" fill="blue"/>
+    <rect id="Rectangle_113" data-name="Rectangle 113" width="31.5" height="3.177" rx="1.467" transform="translate(0.94 26.054)" fill="#9e005d"/>
+    <rect id="Rectangle_114" data-name="Rectangle 114" width="31.5" height="3.177" rx="1.467" transform="translate(16.925 19.699)" fill="#f50"/>
+    <rect id="Rectangle_115" data-name="Rectangle 115" width="7.992" height="3.177" rx="1.467" transform="translate(73.813 19.699)" fill="lime"/>
+    <rect id="Rectangle_116" data-name="Rectangle 116" width="31.5" height="3.177" rx="1.467" transform="translate(86.506 19.699)" fill="#ed1e79"/>
+    <rect id="Rectangle_117" data-name="Rectangle 117" width="18.806" height="3.177" rx="1.467" transform="translate(51.246 19.699)" fill="#29abe2"/>
+  </g>
+  <path id="Path_111" data-name="Path 111" d="M1212.778,674.547V839.6h77.106Z" transform="translate(-1201.11 -659.881)" fill="#fff" opacity="0.33"/>
+  <rect id="Rectangle_118" data-name="Rectangle 118" width="45.47" height="21.652" rx="10" transform="translate(24.9 147.237)" fill="#8cc63f" opacity="0.57"/>
+</svg>
